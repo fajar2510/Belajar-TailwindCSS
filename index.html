@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Belajar Tailwind CSS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+            colors: {
+              warnaku: "#FFFFFF", // ini adalah custom colors
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      * {
+        border: 1px solid silver;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-6xl font-bold text-center my-10">
+      Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent"
+        >TailwindCSS</span
+      >
+    </h1>
+
+    <section
+      class="mb-10 bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300"
+    >
+      <h2 class="text-3xl">Spacing</h2>
+      <div class="m-13">Margin</div>
+      <div class="py-8">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200">
+      <h2 class="text-3xl">Sizing</h2>
+      <div class="w-32 h-32 bg-yellow-200">Kotak 1</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+      <h2 class="mb-2 text-4xl font-bold">
+        Belajar Mengenai Typography TailwindCSS
+      </h2>
+      <div class="mb-4 text-lg text-gray-500">
+        By
+        <a href="#" class="text-gray-700 font-semibold">Fajar Abdurrohman</a>
+        , <span id="tahun" class="font-semibold"></span>
+      </div>
+      <p class="mb-4">
+        Lorem, ipsum dolor sit amet
+        <a href="#" class="under font-semibold text-blue-600"> consectetur </a
+        >adipisicing elit. Officia numquam labore maxime unde fugiat voluptate
+        quibusdam necessitatibus eum voluptatibus iste, repellat dolore? Soluta
+        unde tempore consequuntur? Amet similique iure quis?
+      </p>
+      <blockquote class="mb-4 italic font-thin text-xl">
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+        voluptate maiores omnis, nam nostrum dolor ipsum obcaecati nemo vel quia
+        animi est? Voluptatem, cum incidunt molestias sapiente officia atque
+        dolor."
+      </blockquote>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, at.
+        Aliquam reiciendis debitis ea, nihil sit quis mollitia pariatur
+        accusantium ducimus nobis qui doloribus cum maiores vitae labore ullam
+        rerum.
+      </p>
+    </section>
+
+    <div
+      class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+      style="
+        background-image: url('https://source.unsplash.com//1000x600?city');
+      "
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, ab eaque.
+        Iste ex illo, recusandae corporis, dolorem qui impedit laboriosam
+        temporibus autem sapiente omnis provident totam expedita a quos placeat
+        maxime ipsum tenetur sint nulla. Ducimus ex eligendi soluta officiis
+        fugiat maiores autem totam velit architecto, sapiente harum obcaecati
+        voluptate sit exercitationem adipisci saepe corrupti dignissimos a
+        laudantium! Atque delectus nobis totam aut ipsa at ad sint repellat
+        molestiae quae porro optio, libero magnam iusto velit in deleniti
+        corrupti fugit eius distinctio officia aliquid alias! Dolores eveniet
+        earum vel dolorem deserunt beatae velit maxime atque officia? Mollitia
+        natus quisquam incidunt laboriosam cumque, dolores aperiam sequi facere
+        aspernatur eum ratione error neque quibusdam vero suscipit nesciunt
+        atque iure perspiciatis itaque optio dolorum aliquid dolor unde.
+        Laboriosam, qui ipsum! Recusandae nesciunt eaque ipsam, laboriosam, non,
+        dolore quos quae harum voluptas cupiditate repellat officia assumenda
+        aliquid? Cum eum, adipisci earum id consequuntur facilis repellendus
+        voluptates! Quasi veritatis sed perferendis sint! Eaque pariatur minus
+        autem quos, deserunt est neque dolorum impedit necessitatibus nisi
+        distinctio libero eum illo recusandae molestiae quisquam modi laudantium
+        ipsam tempora iste. Earum enim architecto reprehenderit, possimus
+        blanditiis quaerat ad voluptates provident at repudiandae tenetur quae
+        sunt libero aut qui quo.
+      </p>
+    </div>
+
+    <div
+      class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-tr-3xl rounded-bl-3xl shadow-xl shadow-teal-200 overflow-hidden border-8 flex"
+      style="background-image: url(./src/image1.jpg)"
+    ></div>
+
+    <div
+      class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"
+    ></div>
+
+    <hr class="my-20" />
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300"
+    >
+      Simpan
+    </button>
+    <div class="mb-96"></div>
+    <script>
+      // membuat objek Date
+      const WaktuSekarang = new Date();
+
+      // mengambil tahun dari objek Date
+      const tahun = WaktuSekarang.getFullYear();
+
+      // menampilkan tahun pada elemen HTML
+      document.getElementById("tahun").innerHTML = tahun;
+    </script>
+  </body>
+</html>
