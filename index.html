@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <title>Belajar Tailwind CSS</title>
     <meta charset="UTF-8" />
@@ -27,6 +27,7 @@
             },
             animation: {
               "spin-slow": "spin 3s linear infinite",
+              "bounce-slow": "bounce 3s ease-in-out infinite",
               goyang: "goyang 1s ease-in-out infinite",
             },
             keyframes: {
@@ -40,9 +41,8 @@
       };
     </script>
     <style type="text/tailwindcss">
-      /* *{
-        border: 1px solid silver;
-      } */
+      /* * {border: 1px solid greenyellow;} */
+
       #toggle:checked ~ label div.toggle-circle {
         @apply translate-x-3;
       }
@@ -79,20 +79,20 @@
         <a href="#" class="text-gray-700 font-semibold">Fajar Abdurrohman</a>
         , <span id="tahun" class="font-semibold"></span>
       </div>
-      <p class="mb-4">
+      <p class="mb-4 text-justify">
         Lorem, ipsum dolor sit amet
         <a href="#" class="under font-semibold text-blue-600"> consectetur </a
         >adipisicing elit. Officia numquam labore maxime unde fugiat voluptate
         quibusdam necessitatibus eum voluptatibus iste, repellat dolore? Soluta
         unde tempore consequuntur? Amet similique iure quis?
       </p>
-      <blockquote class="mb-4 italic font-thin text-xl">
+      <blockquote class="mb-4 italic font-thin text-xl text-center">
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
         voluptate maiores omnis, nam nostrum dolor ipsum obcaecati nemo vel quia
         animi est? Voluptatem, cum incidunt molestias sapiente officia atque
         dolor."
       </blockquote>
-      <p class="mb-4">
+      <p class="mb-4 text-right">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, at.
         Aliquam reiciendis debitis ea, nihil sit quis mollitia pariatur
         accusantium ducimus nobis qui doloribus cum maiores vitae labore ullam
@@ -106,7 +106,7 @@
         background-image: url('https://source.unsplash.com//1000x600?city');
       "
     >
-      <p class="p-5 text-2xl">
+      <p class="p-5 text-2xl text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, ab eaque.
         Iste ex illo, recusandae corporis, dolorem qui impedit laboriosam
         temporibus autem sapiente omnis provident totam expedita a quos placeat
@@ -171,7 +171,7 @@
         My Card
       </h5>
       <p
-        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800 text-justify"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
         provident facilis omnis, doloribus corporis magni fugiat, perferendis
@@ -218,6 +218,80 @@
     <div
       class="w-40 h-40 bg-pink-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang"
     ></div>
+
+    <hr class="my-20 border-t-4" />
+
+    <div class="container mx-auto">
+      <div class="border rounded-lg shadow-lg p-10 relative">
+        <div
+          class="w-10 h-10 bg-sky-200 rounded-full flex fixed bottom-5 right-5 cursor-pointer animate-bounce-slow"
+        >
+          <a href="#" class="text-sm m-auto text-sky-600 font-bold">^</a>
+        </div>
+        <div
+          class="w-10 h-10 bg-pink-200 rounded-full flex absolute -top-5 -right-5 cursor-pointer"
+        >
+          <span class="text-sm m-auto text-pink-600 font-bold">X</span>
+        </div>
+        <img
+          class="float-left mr-3 rounded-sm"
+          src="https://source.unsplash.com//1000x600?nature"
+          width="150"
+          alt="nature"
+        />
+        <p
+          class="first-letter:text-3xl first-letter:pr-1 first-letter:font-bold text-justify"
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
+          perferendis nesciunt molestias exercitationem, tempora non magni ex
+          harum odit reprehenderit a neque aspernatur corrupti quo nemo ratione
+          sequi velit maxime eius? Voluptatum enim ipsum dignissimos. Molestias
+          dolor aliquam delectus velit earum eius illo sapiente est, cupiditate,
+          ipsa voluptatum et! Cupiditate autem quas harum quisquam vero at
+          minima atque ipsum, nulla adipisci nemo expedita architecto
+          necessitatibus explicabo, consequuntur itaque labore deleniti
+          inventore debitis? Accusamus nesciunt enim doloribus aperiam esse
+          officiis laboriosam odit commodi fugit sit repellat cumque temporibus
+          eaque quis nisi omnis, atque expedita libero! Enim unde impedit
+          deleniti consequatur aspernatur.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3"
+    >
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+      <img
+        class="mb-4"
+        src="https://source.unsplash.com/600x400?holidays"
+        alt="randomImage"
+      />
+    </div>
 
     <!-- batas content bawah -->
     <div class="mb-96"></div>
