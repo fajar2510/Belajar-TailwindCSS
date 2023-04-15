@@ -41,7 +41,9 @@
       };
     </script>
     <style type="text/tailwindcss">
-      /* * {border: 1px solid greenyellow;} */
+      /* * {
+        border: 1px solid greenyellow;
+      } */
 
       #toggle:checked ~ label div.toggle-circle {
         @apply translate-x-3;
@@ -70,7 +72,7 @@
       <div class="w-32 h-32 bg-yellow-200">Kotak 1</div>
     </section>
 
-    <section class="mb-96 font-inter max-w-3xl mx-auto">
+    <section class="mb-10 font-inter max-w-3xl mx-auto">
       <h2 class="mb-2 text-4xl font-bold">
         Belajar Mengenai Typography TailwindCSS
       </h2>
@@ -135,11 +137,11 @@
     <div
       class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-tr-3xl rounded-bl-3xl shadow-xl shadow-teal-200 overflow-hidden border-8 flex"
       style="background-image: url(./src/image1.jpg)"
-    ></div>
-
-    <div
-      class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"
-    ></div>
+    >
+      <div
+        class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-full"
+      ></div>
+    </div>
 
     <hr class="my-20" />
 
@@ -296,36 +298,148 @@
     <hr class="my-24 border-t-4" />
 
     <div
-      class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl"
+      class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0"
     >
-      <h3 class="text-4xl font-bold text-slate-800">
-        Fajar <span class="text-sky-500">Abdurrohman</span>
-      </h3>
-      <img
-        class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-63 sm:w-full sm:object-cover sm:object-center"
-        src="./src/image2.jpg"
-        alt="image2"
-      />
-      <h2
-        class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl"
-      >
-        Mari Belajar Responsive Tailwindcss
-      </h2>
-      <p class="mt-2 text-slate-600 text-justify sm:mt-4 sm:text-xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, odio.
-        Nesciunt aperiam earum magnam rem omnis eius cumque, dolore ratione
-        similique aut! Odio veritatis tenetur inventore molestias, quasi
-        pariatur necessitatibus.
-      </p>
-      <div class="mt-4 sm:mt-6">
-        <a
-          href="#"
-          class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base"
-          >Subscribe Youtube Channel</a
+      <div class="lg:p-12 lg:flex-1">
+        <h3 class="text-4xl font-bold text-slate-800">
+          Fajar <span class="text-sky-500">Abdurrohman</span>
+        </h3>
+        <img
+          class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-63 sm:w-full sm:object-cover sm:object-center lg:hidden"
+          src="./src/image2.jpg"
+          alt="image2"
+        />
+        <h2
+          class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl"
         >
+          Mari Belajar Responsive Tailwindcss
+        </h2>
+        <p class="mt-2 text-slate-600 text-justify sm:mt-4 sm:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, odio.
+          Nesciunt aperiam earum magnam rem omnis eius cumque, dolore ratione
+          similique aut! Odio veritatis tenetur inventore molestias, quasi
+          pariatur necessitatibus.
+        </p>
+        <div class="mt-4 sm:mt-6">
+          <a
+            href="#"
+            class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base"
+            >Subscribe Youtube Channel</a
+          >
+        </div>
+      </div>
+
+      <!-- div dibawah ini untuk menampilkan img yg baru jika layar besar -->
+      <div class="hidden lg:flex lg:w-1/2">
+        <img
+          class="object-cover rounded-l-full"
+          src="./src/image2.jpg"
+          alt="image2"
+        />
       </div>
     </div>
 
+    <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-700">
+      My Gallery
+    </h2>
+    <div
+      class="container mx-auto px-6 font-inter sm:justify-evenly sm:flex sm:flex-wrap md:flex-wrap sm:gap-6"
+    >
+      <!-- batas konten galeri start -->
+      <div
+        class="rounded-md shadow-lg overflow-hidden mb-5 sm:w-64 md:w-72 sm:mb-0 lg:w-85"
+      >
+        <img
+          class="w-full"
+          src="https://source.unsplash.com/600x400?people"
+          alt="randomImage"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+          <p class="text-sm text-slate-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+            mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Velit, repudiandae?
+          </p>
+        </div>
+      </div>
+
+      <!-- batas image -->
+      <div
+        class="rounded-md shadow-lg overflow-hidden mb-5 sm:w-64 md:w-72 sm:mb-0 lg:w-85"
+      >
+        <img
+          class="w-full"
+          src="https://source.unsplash.com/600x400?people"
+          alt="randomImage"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+          <p class="text-sm text-slate-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+            mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Velit, repudiandae?
+          </p>
+        </div>
+      </div>
+
+      <!-- batas image -->
+      <div
+        class="rounded-md shadow-lg overflow-hidden mb-5 sm:w-64 md:w-72 sm:mb-0 lg:w-85"
+      >
+        <img
+          class="w-full"
+          src="https://source.unsplash.com/600x400?people"
+          alt="randomImage"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+          <p class="text-sm text-slate-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+            mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Velit, repudiandae?
+          </p>
+        </div>
+      </div>
+
+      <!-- batas image -->
+      <div
+        class="rounded-md shadow-lg overflow-hidden mb-5 sm:w-64 md:w-72 sm:mb-0 lg:w-85"
+      >
+        <img
+          class="w-full"
+          src="https://source.unsplash.com/600x400?people"
+          alt="randomImage"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+          <p class="text-sm text-slate-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+            mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Velit, repudiandae?
+          </p>
+        </div>
+      </div>
+      <!-- batas image -->
+      <div
+        class="rounded-md shadow-lg overflow-hidden mb-5 sm:w-64 md:w-72 sm:mb-0 lg:w-85"
+      >
+        <img
+          class="w-full"
+          src="https://source.unsplash.com/600x400?people"
+          alt="randomImage"
+        />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-slate-700">Image Title</div>
+          <p class="text-sm text-slate-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur,
+            mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Velit, repudiandae?
+          </p>
+        </div>
+      </div>
+      <!-- batas konten galeri end -->
+    </div>
     <!-- batas content bawah -->
     <div class="mb-96"></div>
 
