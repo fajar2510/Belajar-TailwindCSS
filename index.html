@@ -10,44 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Poppins:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            spacing: {
-              13: "3.25rem",
-            },
-            fontFamily: {
-              inter: ["Inter"],
-            },
-            colors: {
-              warnaku: "#FFFFFF", // ini adalah custom colors
-            },
-            animation: {
-              "spin-slow": "spin 3s linear infinite",
-              "bounce-slow": "bounce 3s ease-in-out infinite",
-              goyang: "goyang 1s ease-in-out infinite",
-            },
-            keyframes: {
-              goyang: {
-                "0%, 100%": { transform: "rotate(-3deg)" },
-                "50%": { transform: "rotate(3deg)" },
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <link href="./css/style.css" rel="stylesheet" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
     <style type="text/tailwindcss">
       /* * {
         border: 1px solid greenyellow;
       } */
-
-      #toggle:checked ~ label div.toggle-circle {
-        @apply translate-x-3;
-      }
     </style>
   </head>
   <body class="dark:bg-slate-800 dark:text-slate-200">
@@ -329,6 +298,7 @@
         </div>
       </div>
 
+      <!-- belajar flext tailwindcss -->
       <!-- div dibawah ini untuk menampilkan img yg baru jika layar besar -->
       <div class="hidden lg:flex lg:w-1/2">
         <img
@@ -440,6 +410,96 @@
       </div>
       <!-- batas konten galeri end -->
     </div>
+
+    <!-- belajar grid tailwindcss -->
+    <div
+      class="mt-64 p-2 font-inter grid grid-cols-2 gap-2 md:grid-cols-4 md:p-4"
+    >
+      <h2
+        class="text-xl h-15 font-semibold text-slate-700 md:col-start-4 md:row-start-2 md:flex"
+      >
+        <span class="self-center">Welcome to My Website</span>
+      </h2>
+      <div
+        class="h-15 text-lg font-bold text-slate-600 md:col-start-2 md:row-start-2 md:flex"
+      >
+        <span class="self-end"> @fajarabdurrohman</span>
+      </div>
+
+      <!-- konten grid start -->
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid1.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid2.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid3.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid4.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid5.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500 md:col-start-2"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid6.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500 md:col-start-4"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid7.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid8.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500 md:col-start-3"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid9.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <div
+        class="h-15 bg-blue-500 overflow-hidden aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] group relative hover:scale-95 transition-all duration-500 md:col-start-3"
+      >
+        <div
+          class="w-full h-full bg-[url('./src/grid/grid10.jpg')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
+        ></div>
+      </div>
+      <!-- konten grid end -->
+    </div>
+
     <!-- batas content bawah -->
     <div class="mb-96"></div>
 
